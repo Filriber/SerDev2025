@@ -8,7 +8,6 @@ public class Desafio {
 
 		double precoFim = 0;
 		Produto p = new Produto("iPad", 3235.89, 0.13);
-
 		/*
 		 * 1.A partir do produto, calcular o preco real (com desconto) 
 		 * 2.Imposto Municipal: >= 2500 (8.5)/ < 2500 (Isento) 
@@ -16,7 +15,6 @@ public class Desafio {
 		 * 4.Arredondar: Deixar duas casas decimais 
 		 * 5.Formatar: R$ 1234,56
 		 */
-		
 		//Minha Solução sem utilizar o video de resposta do desafio
 		
 		Calculo calculo = (double a, double b) -> {
@@ -46,18 +44,18 @@ public class Desafio {
 		System.out.printf("o Valor da compra e: R$%.2f%n", valorComFrete);
 
 		// Respota do Video de resolução
-//		
-//
-//		Function<Produto, Double> precoFinal = produto -> produto.preco * (1 - produto.desconto);
-//		UnaryOperator<Double> impostoMunicipal = preco -> preco >= 2500 ? preco * 1.085 : preco;
-//		UnaryOperator<Double> frete = preco -> preco >= 3000 ? preco + 100 : preco + 50;
-//		UnaryOperator<Double> arredondar = preco -> Double.parseDouble(String.format("%.2f", preco));
-//		Function<Double, String> formatar = preco -> ("R$" + preco);
-//		
-//		
-//		
-//		String preco = precoFinal.andThen(impostoMunicipal).andThen(frete).andThen(arredondar).andThen(formatar).apply(p);
-//		System.out.println("O preço final é " + preco);
+		
+
+		Function<Produto, Double> precoFinal = produto -> produto.preco * (1 - produto.desconto);
+		UnaryOperator<Double> impostoMunicipal = preco -> preco >= 2500 ? preco * 1.085 : preco;
+		UnaryOperator<Double> frete = preco -> preco >= 3000 ? preco + 100 : preco + 50;
+		UnaryOperator<Double> arredondar = preco -> Double.parseDouble(String.format("%.2f", preco));
+		Function<Double, String> formatar = preco -> ("R$" + preco);
+		
+		
+		
+		String preco = precoFinal.andThen(impostoMunicipal).andThen(frete).andThen(arredondar).andThen(formatar).apply(p);
+		System.out.println("O preço final é " + preco);
 	}
 
 }
