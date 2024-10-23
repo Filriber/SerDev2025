@@ -19,8 +19,8 @@ public class ImprimindoObjetos {
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
-		System.out.println("\nUsando Stream");
+		System.out.println("\nUsando Stream...");
 		Stream<String> stream = aprovados.stream();
-		stream.forEach(System.out::println);
+		stream.forEach(System.out::println); //laco interno!!!
 	}
 }
