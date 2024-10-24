@@ -3,7 +3,7 @@ package lambdas;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
-public class muuu {
+public class Municipal {
 public static void main(String[] args) {
 	
 	Function<Produto, Double> precoFinal = produto -> produto.preco * (1 - produto.desconto);
