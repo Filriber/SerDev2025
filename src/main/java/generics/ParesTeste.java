@@ -11,6 +11,6 @@ public class ParesTeste {
 		resultadoConcurso.adicionar(4, "Ana");
 		resultadoConcurso.adicionar(2, "Rebeca");
 		
-		System.out.println(resultadoConcurso);
+		System.out.println(resultadoConcurso.getValor(1));
 	}
 }

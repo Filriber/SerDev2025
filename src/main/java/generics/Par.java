@@ -10,8 +10,6 @@ public class Par <C, V> {
 		
 	}
 
-	
-
 	public Par(C chave, V valor) {
 		super();
 		this.chave = chave;
